@@ -1,0 +1,7 @@
+MMM:  1040715 UNMETHYLATED     51696 METHYLATED  ( 1092411 total)
+MSC:   896377 UNMETHYLATED    196034 METHYLATED  ( 1092411 total)
+     51696 ( 5 %) of them are commonly marked   METHYLATED
+    896377 (82 %) of them are commonly marked UNMETHYLATED
+826465 cytosines (76 %) updated by FDR procedure
+      3825 of them marked   METHYLATED by MMM
+    822640 of them marked UNMETHYLATED by MMM

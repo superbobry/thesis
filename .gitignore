@@ -1,0 +1,17 @@
+auto
+_region_.tex
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.el
+*.log
+*.out
+*.nav
+*.pyg
+*.snm
+*.toc
+*.vrb
+*.bcf
+*.xml
+.DS_Store

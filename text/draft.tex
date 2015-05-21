@@ -1,0 +1,72 @@
+%% -*- TeX-engine: xetex; ispell-dictionary: "russian" -*-
+
+\documentclass[a4paper,14pt]{au-diploma}
+
+\usepackage{microtype}
+
+\usepackage{chemfig}
+
+\usepackage{fancyvrb}
+\newcommand{\bl}[1]{\textbf{#1}}
+
+%% Устраняет проблемы с переносом слов, содержаших дефис.
+\usepackage{hyphenat}
+
+%% Библиография.
+\usepackage{csquotes}
+\usepackage[style=gost-numeric-min,backend=biber,movenames=false]{biblatex}
+\addbibresource{references.bib}
+
+%% Plate notation.
+\usepackage{tikz}
+
+\usetikzlibrary{arrows,calc,shapes,positioning}
+\usetikzlibrary{bayesnet}
+
+%% Total pages, figures etc.
+\usepackage[figure,page,table]{totalcount}
+
+%% Caption hacking.
+\usepackage{subcaption}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+\renewcommand{\thesubtable}{\asbuk{subtable}}
+\usepackage[font=small,tableposition=top,margin=1em]{caption}
+
+%% Float barriers.
+\usepackage{placeins}
+
+%% Line break after paragraph title.
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\E}[2]{\mathbb{E}_{#1} \left[ #2 \right]}
+\newcommand{\I}[1]{\mathbb{I}\left( #1 \right)}
+\newcommand{\op}[1]{\operatorname{#1}}
+
+\sloppy  %% Awww...
+
+\begin{document}
+
+\include{title}
+
+\include{abstract}
+
+%% Первая страница --- титульный лист.
+\setcounter{page}{2}
+\tableofcontents
+
+\include{introduction}
+\include{review}
+\include{models}
+\include{evaluation}
+\include{conclusions}
+
+\printbibliography
+
+\end{document}
